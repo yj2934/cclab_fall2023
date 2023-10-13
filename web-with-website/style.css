@@ -1,5 +1,8 @@
 /* to style the element, first name the element, then write style inside */
 h2{
+    background-color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 100px;
     color: goldenrod;
 }
 img{
@@ -7,7 +10,7 @@ img{
     
 }
 body{
-    background-color: lightgoldenrodyellow;
+    background-color: antiquewhite;
 }
 p{
     font-size: larger;
@@ -18,6 +21,10 @@ p{
 
 }
 .highlight{
-    color: rgb(0, 0, 0);
-  background: tomato;
+    color: gold;
+    background-color: black;
+    text-decoration:overline;
+}
+.underline{
+  text-decoration: underline;  
 }
