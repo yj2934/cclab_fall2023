@@ -1,13 +1,22 @@
 p{
-    color: gold;
+    color: rgb(253, 230, 97);
+    font-size: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 h1{
     background-color: black;
-    color: rgb(113, 178, 253);
+    color: rgb(145, 198, 255);
+    font-size: 100px;
 }
 h2{
+    text-decoration: underline;
     color: rgb(113, 178, 253);
+    font-size: 60px;
 }
 body{
-    background-color: rgb(7, 27, 83);
+    font-size: 50px;
+    
+    line-height: normal;
+    text-align: center;
+    background-color: rgb(13, 23, 45);
 }

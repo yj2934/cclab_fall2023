@@ -32,12 +32,19 @@ function setup() {
 function draw() {
   textSize(20)
   text("try to move the mouse/click the mouse",450,20)
-  
+  text("click c to clear the petri dishes",450,40)
   
   
   
   background(50, 20);
 
+  //clear the background
+  if(keyIsPressed==true&&key=="c"){
+    fill(50)
+    rect(0,0,800,800)
+  }
+
+  
   //subject body size change
   mdo = mdo + mdos;
   if (mdo > 40 || mdo < 20) {
