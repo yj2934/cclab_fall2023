@@ -2,7 +2,9 @@
 
 let NUM_OF_PARTICLES = 3; // Decide the initial number of particles.
 
+
 let particles = [];
+
 
 function preload(){
   
@@ -18,18 +20,20 @@ function setup() {
   for (let i = 0; i < NUM_OF_PARTICLES; i++) {
     particles[i] = new Particle(mouseX, mouseY-40);
   }
+  
 }
 
 function draw() {
 
   
   background(10,30,50);
+  noFill()
   stroke(250,250,200)
   strokeWeight(3)
   ellipse(mouseX,mouseY-60,20,40)
 
   noStroke()
-  fill(0,50,30)
+  fill(0,40,30)
   rect(0,550,600,50)
   stroke(250,250,200)
   strokeWeight(3)
@@ -39,7 +43,8 @@ function draw() {
   if(mouseIsPressed == true){
     textSize(30)
     text("💨",mouseX-40,mouseY-50)
-       particles.push(new Particle(mouseX+20, mouseY-60))   
+       particles.push(new Particle(mouseX+20, mouseY-60))  
+
 }
 
   // update and display
@@ -78,6 +83,7 @@ class Particle {
     this.green=random(100,255)
     this.blue=random(100,255)
     this.inRange = true;
+    
   }
   // methods (functions): particle's behaviors
   update() {
@@ -101,8 +107,14 @@ strokeWeight(random(1,1.5))
     noFill()
     arc(0,0,this.dia1-10,this.dia2-10,PI+3*QUARTER_PI,2*PI)
 
-
     pop();
+
+    stroke(255,30)
+    strokeWeight(3)
+    noFill()
+    arc(mouseX,mouseY-60,10,30,PI+2*QUARTER_PI,2*PI)
+    fill(this.red,this.green,this.blue,10)
+    ellipse(mouseX,mouseY-60,20,40)
   }
   checkOutOfRange(){
  
