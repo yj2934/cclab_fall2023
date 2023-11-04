@@ -37,7 +37,7 @@ function draw() {
 
 
   if(mouseIsPressed == true){
-    textSize(20)
+    textSize(30)
     text("💨",mouseX-40,mouseY-50)
        particles.push(new Particle(mouseX+20, mouseY-60))   
 }
