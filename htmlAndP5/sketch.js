@@ -26,7 +26,8 @@ let yArray3 = [];
 let initalSizeOfArray3 = 7;
 
 function setup() {
-  createCanvas(800, 800);
+  let cnv = createCanvas(800, 800);
+  cnv.parent("canvasWrapper");
 }
 
 function draw() {
