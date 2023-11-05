@@ -31,6 +31,10 @@ function draw() {
   stroke(250,250,200)
   strokeWeight(3)
   ellipse(mouseX,mouseY-60,20,40)
+  stroke(255,80)
+    strokeWeight(3)
+    noFill()
+    arc(mouseX,mouseY-60,10,30,PI+2*QUARTER_PI,2*PI)
 
   noStroke()
   fill(0,40,30)
@@ -97,7 +101,7 @@ class Particle {
     // particle's appearance
     push();
     translate(this.x, this.y);
-    fill(this.red,this.green,this.blue,80)
+    fill(this.red,this.green,this.blue,50)
 stroke(255,200)
 strokeWeight(random(1,1.5))
     ellipse(0, 0, this.dia1,this.dia2);
@@ -109,12 +113,9 @@ strokeWeight(random(1,1.5))
 
     pop();
 
-    stroke(255,30)
-    strokeWeight(3)
-    noFill()
-    arc(mouseX,mouseY-60,10,30,PI+2*QUARTER_PI,2*PI)
+    
     fill(this.red,this.green,this.blue,10)
-    ellipse(mouseX,mouseY-60,20,40)
+    // ellipse(mouseX,mouseY-60,20,40)
   }
   checkOutOfRange(){
  
