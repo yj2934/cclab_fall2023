@@ -26,7 +26,7 @@ function setup() {
 function draw() {
 
   
-  background(10,30,50);
+  background(20,30,50);
   noFill()
   stroke(250,250,200)
   strokeWeight(3)
@@ -37,8 +37,8 @@ function draw() {
     arc(mouseX,mouseY-60,10,30,PI+2*QUARTER_PI,2*PI)
 
   noStroke()
-  fill(0,40,30)
-  rect(0,550,600,50)
+  fill(20,40,30)
+  rect(0,580,600,20)
   stroke(250,250,200)
   strokeWeight(3)
   line(mouseX,mouseY-40,mouseX,mouseY)
