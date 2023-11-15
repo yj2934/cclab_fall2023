@@ -1,0 +1,47 @@
+h1{
+  color: rgb(133, 208, 255);
+}
+p{
+  font-size: x-large;
+  color: rgb(0, 0, 0);
+}
+.description{
+outline-color: blueviolet;
+outline-style: dotted;
+outline-width: thick;
+}
+#canvasWrapper{
+  background-color: rgb(195, 186, 255);
+  outline:3px rgb(168, 226, 255) solid;
+}
+.name{
+  color: rgb(255, 130, 184);
+  outline-color: deeppink;
+  outline-style: dashed;
+ outline-width: thick;
+}
+
+.caption{
+outline: 5px rgb(131, 214, 255) dotted;
+}
+.captionWrapper{
+margin:30px;
+padding:5px;
+outline:3px rgb(91, 79, 255) solid;
+background-color: rgb(255, 212, 239);
+}
+.box2{
+position:absolute;
+left:200px;
+top:200px;
+}
+.box3{
+  position:fixed;
+  left:200px;
+top:400px;
+}
+.box4{
+  position:relative;
+  
+ }
+ 
