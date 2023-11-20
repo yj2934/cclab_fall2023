@@ -1,0 +1,119 @@
+.ff1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: green;
+    outline-color: lime;
+    outline-style: dashed;
+}
+.ff2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: darkorange;
+    outline-color: rgb(255, 215, 96);
+    outline-style:dotted;
+}
+
+.ff3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: slateblue;
+    outline-color: blueviolet;
+    outline-style: double;
+
+}
+.ff4{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: yellowgreen;
+    outline: greenyellow solid;
+}
+.ff5{
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    background-color: deeppink;
+}
+.ff6{
+    font-family: 'Times New Roman', Times, serif;
+font-style: oblique;
+color: darkslateblue;
+}
+.ff7{
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: coral;
+    text-decoration: overline;
+text-decoration: transparent;
+}
+.ff8{
+    color: rgb(28, 80, 115);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* font-style: oblique; */
+    text-decoration: line-through;
+}
+.ff9{
+    color: purple;
+    text-shadow: 10px 5px 3px rgba(128,50,128,20);
+ 
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.ff10{
+    text-decoration: underline;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  
+
+}
+
+.button {
+    background-color: #30337a;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.5s ease;
+    }
+    .button:hover {
+    background-color: #fff;
+    color: #6f65cf;
+    }
+    .highlight{
+       background-color: rgb(255, 129, 173);
+    }
+
+    .captionWrapper{
+        margin: 10px ;
+        padding: 3px;
+        background-color: rgb(100, 64, 147);
+        outline: 3px #8f76ff solid;
+    }
+    .caption{
+        font-size: 15px;
+        /* font-family: cursive; */
+        /* font-family: fantasy; */
+        font-family: monospace;
+        color: gold;
+        outline: 5px rgb(204, 255, 0) double;
+        padding: 6px;
+    }
+    .box1{
+        position: absolute;
+        left:200px;
+        top:400px;
+    }
+    .box2{
+        position: fixed;
+        left: 300px;
+        top: 10px;
+    }
+    .box3{
+       position: ;
+    }
+    .box4{
+        position: relative;
+        left:500px;
+        top:300px ;
+    }
+    h1{
+      font-family: fantasy;
+      font-weight: 200px;
+      color: deeppink;
+    }
+
+    body{
+       
+    }
+   

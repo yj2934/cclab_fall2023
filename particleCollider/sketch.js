@@ -1,11 +1,22 @@
 let atoms=[]
-let numAtoms=30
+let numAtoms=20
+let fruitImages=[]
+
+function preload(){
+  for(let i=0; i<3;i++){
+    let path= "images/fruit"+i+".png"
+    console.log(path)
+    fruitImages[i]=loadImage(path)
+  }
+
+  }
 
 function setup(){   
-    let cnv = createCanvas(400, 400);
+    let cnv = createCanvas(800, 400);
     cnv.parent("canvasWrapper");
     for(let i=0; i<numAtoms;i++){
-        atoms[i]=new Atom()
+        let ran=random([0,1,2])
+        atoms[i]=new Atom(fruitImages[ran])
     }
    rectMode(CENTER)
 
@@ -13,12 +24,21 @@ function setup(){
 
 function draw(){
     background(0);
+
+if(random()<0.02){
+    atoms.push(new Atom(fruitImages[0]))
+}
+
+    
+
     for(let i=0;i<atoms.length; i++){
-        
+       
         let currentAtom = atoms[i]
         currentAtom.fly()
         currentAtom.display()
+        currentAtom.checkIfOnCanvas()
         currentAtom.isTouched=false
+
 
         //for each atom, check 
         for(let j=0;j<atoms.length; j++){
@@ -33,15 +53,24 @@ function draw(){
            
         }
     }
+    
+    for(let i= atoms.length-1;i>=0;i-=1){
+       if(atoms[i].isOnCanvas==false){
+            atoms.splice(i,1)
+        }
+    }
+    
 }
 
 class Atom{
-    constructor(){
+    constructor(fruitImage){
+this.img=fruitImage
         // this.x=width/2s
         this.y=random(0,height)
         this.size=40
         this.speed=random(4,7)
         this.direction=random([-1,1])
+        this.isOnCanvas=true
 
         this.isTouched=false
 
@@ -63,9 +92,12 @@ else if(this.isTouched==true){
     fill(0,0,255)
 }
 
-rect(0,0,this.size,this.size)
-// fill(0,255,0)
-// circle(0,0,5)
+// rect(0,0,this.size,this.size)
+push()
+scale(0.15)
+image(this.img,-this.img.width/2,-this.img.height/2)
+pop()
+
 pop()
 
     }
@@ -84,6 +116,11 @@ this.x+=this.speed*this.direction
         }else{
             this.isTouched=false
         }
+    }
+    checkIfOnCanvas(){
+if(this.x<-100||this.x>width+100){
+    this.isOnCanvas=false 
+}
     }
 
 }
