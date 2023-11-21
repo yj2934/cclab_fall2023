@@ -47,7 +47,7 @@ text-decoration: transparent;
     text-decoration: line-through;
 }
 .ff9{
-    color: purple;
+    color: rgb(176, 149, 255);
     text-shadow: 10px 5px 3px rgba(128,50,128,20);
  
  font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -113,7 +113,5 @@ text-decoration: transparent;
       color: deeppink;
     }
 
-    body{
-       
-    }
+    
    
