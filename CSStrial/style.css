@@ -47,7 +47,7 @@ text-decoration: transparent;
     text-decoration: line-through;
 }
 .ff9{
-    color: rgb(176, 149, 255);
+    color: rgb(179, 153, 255);
     text-shadow: 10px 5px 3px rgba(128,50,128,20);
  
  font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -86,7 +86,7 @@ text-decoration: transparent;
         /* font-family: fantasy; */
         font-family: monospace;
         color: gold;
-        outline: 5px rgb(204, 255, 0) double;
+        outline: 5px rgb(102, 255, 0) double;
         padding: 6px;
     }
     .box1{

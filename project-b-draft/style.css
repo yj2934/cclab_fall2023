@@ -49,3 +49,13 @@ p{
   top: 10px;
 }
 
+#canvasWrapper{
+ position: static;
+}
+
+#canvasWrapper2{
+  position: fixed;
+  left: 1000px;
+  top: 50px;
+}
+

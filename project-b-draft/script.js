@@ -4,7 +4,7 @@ function setup() {
 }
 
 function draw() {
-  background(0);
+  background(7,53,84);
   myfish.update();
   myfish.display(); 
 }
@@ -50,20 +50,34 @@ class MyFish{
       
     }
     if(keyIsPressed==true&&key=="ArrowRight"){
+      text("moving right",20,20)
+      textSize(20)
+      fill(255,255,0)
       this.x+=2
     }
     else if(keyIsPressed==true&&key=="ArrowUp"){
+      text("moving up",20,20)
+      textSize(20)
+      fill(255,255,0)
       this.y-=2
     }
     else if(keyIsPressed==true&&key=="ArrowDown"){
       this.y+=2
+      text("moving down",20,20)
+      textSize(20)
+      fill(255,255,0)
     }
     else if(keyIsPressed==true&&key=="ArrowLeft"){
+      fill(255,255,0)
+      text("moving left",20,20)
+      textSize(20)
+      
       this.taildia1=map(sin(this.sinInPut),-1,1,-20,20)
    this.eye1x-=0.9
       this.eye2x-=0.5
      this.dia1-=2
       if(0<this.dia1&&this.dia1<=20){
+        noStroke()
         this.dia1=-20
          fill(255,167,3,200)
       ellipse(this.x+this.findia1,this.y,this.findia1,this.findia2)
@@ -98,15 +112,27 @@ class MyFish{
       
     }
     if(keyIsPressed==true&&key=="ArrowLeft"){
+      text("moving left",20,20)
+      textSize(20)
+      fill(255,255,0)
       this.x-=2
     }
     else if(keyIsPressed==true&&key=="ArrowUp"){
+      text("moving up",20,20)
+      textSize(20)
+      fill(255,255,0)
       this.y-=2
     }
     else if(keyIsPressed==true&&key=="ArrowDown"){
+      text("moving down",20,20)
+      textSize(20)
+      fill(255,255,0)
       this.y+=2
     }
     else if(keyIsPressed==true&&key=="ArrowRight"){
+      text("moving right",20,20)
+      textSize(20)
+      fill(255,255,0)
       this.taildia1=map(sin(this.sinInPut),-1,1,-20,20)
    this.eye2x+=0.9
       this.eye1x+=0.5
