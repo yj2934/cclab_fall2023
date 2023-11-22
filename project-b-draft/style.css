@@ -49,6 +49,45 @@ p{
   top: 10px;
 }
 
+.box3{
+position: fixed;
+  left: 300px;
+  top: 600px;
+}
+.box4{
+ position: fixed;
+  left: 600px;
+  top: 600px;
+}
+
+
+
+.captionWrapper2{
+  margin: 15px ;
+  padding: 3px 5px;
+  line-height: 15px;
+ 
+}
+/* .caption2{
+  font-size: 15px;
+  font-family: monospace;
+  color: rgb(255, 255, 255);
+  outline: 5px rgb(255, 163, 223) dotted;
+  padding: 5px ;
+} */
+.caption2{
+background-color: #fff292;
+    color: #09293d;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.5s ease;
+    }
+    .caption2:hover {
+    background-color: #cac0ff;
+    color: #6f65cf;
+    }
+
+
 #canvasWrapper{
  position: static;
 }
