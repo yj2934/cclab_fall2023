@@ -59,7 +59,11 @@ position: fixed;
   left: 600px;
   top: 600px;
 }
-
+.box5{
+  position: fixed;
+   left: 800px;
+   top: 200px;
+ }
 
 
 .captionWrapper2{
@@ -68,6 +72,9 @@ position: fixed;
   line-height: 15px;
  
 }
+
+
+
 /* .caption2{
   font-size: 15px;
   font-family: monospace;
@@ -92,9 +99,8 @@ background-color: #fff292;
  position: static;
 }
 
-#canvasWrapper2{
+/* #canvasWrapper2{
   position: fixed;
   left: 1000px;
   top: 50px;
-}
-
+} */

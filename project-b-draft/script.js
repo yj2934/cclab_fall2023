@@ -1,6 +1,7 @@
 function setup() {
   createCanvas(windowWidth, 400);
   myfish = new MyFish(100, 100);
+ 
 }
 
 function draw() {

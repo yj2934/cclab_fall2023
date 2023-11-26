@@ -2,6 +2,7 @@ let sinInPut=0
 function setup() {
   let cnv = createCanvas(180, 200);
     cnv.parent("canvasWrapper2");
+    
 }
 
 function draw() {
