@@ -29,8 +29,8 @@ let confettis = [];
 let numConfetti = 1;
 
 function preload(){
-  
   clickSound = loadSound("lib/Bubble.m4a")
+  eatSound= loadSound("lib/eat.wav")
 }
 
 function setup() {
@@ -116,17 +116,19 @@ function draw() {
   for (let i = bubbles.length - 1; i >= 0; i--) {
     if (bubbles[i].inRange == false) {
       bubbles.splice(i, 1);
+      
     }
-    if (bubbles[i].isTouched == true) {
-      bubbles.splice(i, 1);
-      clickSound.play()
-    }
+    // if (bubbles[i].isTouched == true) {
+    //   bubbles.splice(i, 1);
+    //   clickSound.play()
+    // }
     
   }
 
   for (let i = smallFishes.length - 1; i >= 0; i--) {
     if (smallFishes[i].isEaten == true) {
       smallFishes.splice(i, 1);
+      eatSound.play()
     }
   }
 
@@ -507,7 +509,8 @@ class Bubble {
       myfish.x <= this.x + this.dia2 &&
       this.x - this.dia2 <= myfish.x
     ) {
-      this.isTouched=true
+      this.inRange = false
+      // this.isTouched=true
        if (this.type == -1) {
       score+=20
     }
