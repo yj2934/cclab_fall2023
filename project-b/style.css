@@ -143,7 +143,10 @@ background-color: #fff292;
 #canvasWrapper{
  position: static;
 }
-
+img{
+  width: 600px;
+  height: 400px;
+}
 /* iframe{
   position: fixed;
   left: 1000px;
