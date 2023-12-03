@@ -844,7 +844,7 @@ class bigFish{
     
 
   
-    if(this.startChasing==true){
+    if(this.startChasing==true&&myfish.stage==1){
      if(this.turnAround==false&&myfish.x<this.x+this.w/2&&myfish.y<this.y+this.h/2&&myfish.y>this.y-this.h/2) {
        score=0
        this.losePoints=true
