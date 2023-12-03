@@ -26,7 +26,7 @@
 .ff5{
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: italic;
-    background-color: deeppink;
+    background-color: rgb(164, 84, 110);
 }
 .ff6{
     font-family: 'Times New Roman', Times, serif;
@@ -47,7 +47,7 @@ text-decoration: transparent;
     text-decoration: line-through;
 }
 .ff9{
-    color: rgb(179, 153, 255);
+    color: rgb(136, 96, 255);
     text-shadow: 10px 5px 3px rgba(128,50,128,20);
  
  font-family: Verdana, Geneva, Tahoma, sans-serif;

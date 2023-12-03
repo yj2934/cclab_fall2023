@@ -38,12 +38,14 @@ p{
 .caption1{
   font-size: 15px;
   font-family: monospace;
+  background-color: lightsteelblue;
   color: rgb(255, 221, 0);
   outline: 5px rgb(170, 255, 79) double;
   padding: 5px ;
 }
 
 .box2{
+  
   position: fixed;
   left: 500px;
   top: 10px;
@@ -99,6 +101,14 @@ background-color: #fff292;
 
 #canvasWrapper{
  position: static;
+}
+
+iframe{
+  position: fixed;
+  left: 1000px;
+  top: 100px;
+  width: 180px;
+  height:180px;
 }
 
 /* #canvasWrapper2{
