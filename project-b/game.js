@@ -28,6 +28,10 @@ let myfish;
 let confettis = [];
 let numConfetti = 1;
 
+function preload(){
+  
+  clickSound = loadSound("lib/Bubble.m4a")
+}
 
 function setup() {
   createCanvas(800, 800);
@@ -113,6 +117,11 @@ function draw() {
     if (bubbles[i].inRange == false) {
       bubbles.splice(i, 1);
     }
+    if (bubbles[i].isTouched == true) {
+      bubbles.splice(i, 1);
+      clickSound.play()
+    }
+    
   }
 
   for (let i = smallFishes.length - 1; i >= 0; i--) {
@@ -454,6 +463,7 @@ class Bubble {
     this.speedX = 0;
     this.speedY = random(-10, -5);
     this.inRange = true;
+    this.isTouched=false
     this.type = random([-2, -1, 0, 1, 2]);
   }
   // methods (functions): particle's behaviors
@@ -497,7 +507,7 @@ class Bubble {
       myfish.x <= this.x + this.dia2 &&
       this.x - this.dia2 <= myfish.x
     ) {
-      this.inRange = false;
+      this.isTouched=true
        if (this.type == -1) {
       score+=20
     }
