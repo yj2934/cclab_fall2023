@@ -1,9 +1,20 @@
 h1{
   font-size:100px;
+  color: rgb(0, 0, 0);
+ font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+line-height: 15px;
+}
+h2{
+  font-size:50px;
   color: rgb(255, 255, 255);
  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 line-height: 15px;
 }
+h3{
+  color: rgb(255, 252, 252);
+}
+
+
 .titleP1{
   text-shadow: 10px 5px 3px rgba(255,216,90,20);
   position: relative;
@@ -20,6 +31,7 @@ line-height: 15px;
   left: 10px;
 }
 body{
+  text-align: center;
   background-color: rgb(7, 53, 84);
 }
 p{
@@ -39,79 +51,105 @@ p{
   font-size: 15px;
   font-family: monospace;
   color: rgb(255, 221, 0);
-  outline: 5px rgb(170, 255, 79) double;
+  /* outline: 5px rgb(170, 255, 79) double; */
   padding: 5px ;
 }
 
 .box2{
-  background-color: lightsteelblue;
+  background-color: rgb(44, 62, 86);
   position: fixed;
   left: 500px;
   top: 10px;
 }
 
-.box3{
-position: fixed;
-  left: 300px;
-  top: 600px;
-}
-.box4{
- position: fixed;
-  left: 600px;
-  top: 600px;
-}
+
 .box5{
   position: fixed;
-   left: 800px;
-   top: 200px;
+   left: 10px;
+   top: 80px;
  }
 
 
 .captionWrapper2{
-  font-size: 15px;
+  font-size: 20px;
   font-family: monospace;
   color: rgb(255, 221, 0);
   margin: 15px ;
   line-height: 15px;
  
 }
+.box3{
+  position: fixed;
+    left: 300px;
+    top: 700px;
+  }
+  .box4{
+   position: fixed;
+    left: 600px;
+    top: 700px;
+  }
+
+.highlightdeeppink{
+  color: rgb(183, 69, 113);
+}
+.highlightgreen{
+  color: aquamarine;
+}
+.highlightyellow{
+  color: #ffe100;
+}
+.highlightpink{
+  color: rgb(255, 129, 196);
+}
+.underline{
+  text-decoration: underline;
+}
+.highlightpurple{
+  color: #ac9bff;
+}
+.highlightorange{
+  color: #ff931f;
+}
+.highlightblue{
+  color: deepskyblue;
+}
 
 
-
-/* .caption2{
-  font-size: 15px;
-  font-family: monospace;
-  color: rgb(255, 255, 255);
-  outline: 5px rgb(255, 163, 223) dotted;
-  padding: 5px ;
-} */
 .caption2{
+  font-size: 30px;
 background-color: #fff292;
     color: #ffa91f;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 30px 40px;
+    border-radius: 10px;
     transition: background-color 0.5s ease;
     }
     .caption2:hover {
     background-color: #cac0ff;
     color: #6f65cf;
     }
-
+.caption3{
+      font-size: 30px;
+    background-color: #fff292;
+        color: #ffa91f;
+        padding: 30px 40px;
+        border-radius: 10px;
+        transition: background-color 0.5s ease;
+        }
+        .caption3:hover {
+        background-color: #ffa8d4;
+        color: #ff77c2;
+        }
 
 #canvasWrapper{
  position: static;
 }
 
-iframe{
+/* iframe{
   position: fixed;
   left: 1000px;
   top: 100px;
   width: 180px;
   height:180px;
-}
-
-/* #canvasWrapper2{
-  position: fixed;
-  left: 1000px;
-  top: 50px;
 } */
+
+
