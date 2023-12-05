@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(400, 300);
   myfish = new MyFish(100, 100);
  
 }
