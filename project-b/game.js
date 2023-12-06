@@ -213,6 +213,7 @@ function draw() {
   
   myfish.update();
   myfish.display();
+  myfish.checkMouth()
 
   pop();
 
@@ -415,6 +416,11 @@ class MyFish {
     // fill("red");
     // circle(0,0,5)
     pop();
+  }
+  checkMouth(){
+    if(fishOpenMouth==true){
+      fishOpenMouth=false
+    }
   }
 }
 
@@ -691,9 +697,9 @@ class smallFish {
       score += 10;
 
     }
-    else{
-      fishOpenMouth=false
-    }
+    // else{
+    //   fishOpenMouth=false
+    // }
   }
 }
 
