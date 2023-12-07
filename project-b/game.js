@@ -128,7 +128,8 @@ function draw() {
   for (let i = smallFishes.length - 1; i >= 0; i--) {
     if (smallFishes[i].isEaten == true) {
       smallFishes.splice(i, 1);
-      eatSound.play()
+       eatSound.play()
+
     }
   }
 
@@ -225,9 +226,9 @@ function draw() {
     fill(255,255,0)
   }
   else if(myfish.stage==2){
-    fill(255,200,100)
+    fill(255, 179, 203)
   }
-  else if(this.stage==3){
+  else if(myfish.stage==3){
      fill(179, 153, 255)
     }
   
@@ -260,12 +261,20 @@ class MyFish {
     this.mode = 1;
     this.turnaround = false;
     
-    
+    this.ifChased=false
     this.stage=1
     
     this.speed = 20;
   }
   update() {
+
+    if(this.ifChased==true){
+      textSize(15)
+      fill(255,255,0)
+      text("I've been found! I have to swim away! Quickly!!",this.x-30,this.y-50)
+    }
+    
+    
     if(score>=120){
     this.stage=2
   }
@@ -303,11 +312,11 @@ class MyFish {
 
       if (keyIsPressed == true && key == "ArrowLeft") {
         this.taildia1 = map(sin(this.sinInPut), -1, 1, -20, 20);
-        this.eye1x -= 0.9;
-        this.eye2x -= 0.5;
-        this.dia1 -= 2;
-        if (0 < this.dia1 && this.dia1 <= 20) {
-          this.dia1 = -20;
+        this.eye1x -= 1.8;
+        this.eye2x -= 1.1;
+        this.dia1 -= 5;
+        if (0 < this.dia1 && this.dia1 <= 10) {
+          this.dia1 = -10;
           fill(255, 167, 3, 200);
           ellipse(this.x + this.findia1, this.y, this.findia1, this.findia2);
         } else if (-80 < this.dia1 && this.dia1 <= -20) {
@@ -345,11 +354,11 @@ class MyFish {
 
       if (keyIsPressed == true && key == "ArrowRight") {
         this.taildia1 = map(sin(this.sinInPut), -1, 1, -20, 20);
-        this.eye2x += 0.9;
-        this.eye1x += 0.5;
-        this.dia1 += 2;
-        if (-20 < this.dia1 && this.dia1 <= 0) {
-          this.dia1 = 20;
+        this.eye2x += 1.8;
+        this.eye1x += 1.1;
+        this.dia1 += 5;
+        if (-10 < this.dia1 && this.dia1 <= 0) {
+          this.dia1 = 10;
           fill(255, 167, 3, 200);
           ellipse(this.x + this.findia1, this.y, this.findia1, this.findia2);
         } else if (20 <= this.dia1 && this.dia1 < 80) {
@@ -734,6 +743,9 @@ class bigFish{
     this.lose=false
     this.losePoints=false
     
+     this.fightcolor=255
+    this.fightcolorchange=1
+    
   }
   display(){
     push()
@@ -753,6 +765,7 @@ class bigFish{
     
     
     if(this.startChasing==false){
+      myfish.ifChased=false
       if(this.lose==false){
         fill(0)
       circle(this.w/2+this.eyePosition+this.movement,-this.h/2+this.h/3+this.movement,10)
@@ -775,16 +788,34 @@ class bigFish{
       triangle(this.w/2-25+this.movement,-this.h/2+this.h/3+this.movement,this.w/2-40+this.movement,-this.h/2+this.h/4+this.movement,this.w/2-20+this.movement,-this.h/2+this.h/3.5+this.movement)
       textSize(50)
       text("💢",10,-this.h/2)
+   
+        if(myfish.stage==1){
+          myfish.ifChased=true
+          textSize(20)
+        fill(255,100,100)
+text("I will catch you!!",-30,-this.h/2-50)
+        }
+        
+       
       }
       
       if(this.turnAround==true){
         fill(0)
       triangle(this.w/2+25+this.movement,-this.h/2+this.h/3+this.movement,this.w/2+40+this.movement,-this.h/2+this.h/4+this.movement,this.w/2+20+this.movement,-this.h/2+this.h/3.5+this.movement)
       textSize(50)
+  
       text("💢",-10,-this.h/2)
+        if(myfish.stage==1){
+           myfish.ifChased=true
+          textSize(20)
+        fill(255,100,100)
+text("I will catch you!!",-30,-this.h/2-50)
+        }
+         
       }
+    
       
-      
+  
       
      
     }
@@ -866,7 +897,20 @@ class bigFish{
       
       
     }
-    
+   if(myfish.stage==2) {
+      this.startChasing=false
+     if(dist(myfish.x,myfish.y,this.x,this.y)<500&&myfish.x>this.x+this.w/2&&this.turnAround==false){
+       fill(255,100,100)
+       textSize(20)
+     text("Let you off this time.",this.x-100,this.y-this.h/2-20)
+     }
+     if(dist(myfish.x,myfish.y,this.x,this.y)<500&&myfish.x<this.x-this.w/2&&this.turnAround==true){
+       textSize(20)
+       fill(255,100,100)
+     text("Let you off this time.",this.x-100,this.y-this.h/2-20)
+     }
+     
+   }
     
       
 if(myfish.stage==3){
@@ -877,21 +921,27 @@ if(myfish.stage==3){
      // textSize(50)
      // fill(0,255,255)
      //     text("start Fighting!",width/2,height/2)
-     fill(255)
-     
+     fill(this.fightcolor)
+     noStroke()
       if(this.fightArc<2*PI){
       arc(this.x,this.y,600,600,this.fightArc,2*PI)
+        
+        
+    fill(255,100,100)
+       textSize(20)
+     text("Let's fight.",this.x-100,this.y-this.h/2-20)    
     
-    textSize(30)
-    fill(0,255,255)
-    
-     //    text("start Fighting!", this.x+this.w/2,this.y-200)
-     // text("click the mouse!", this.x+this.w/2,this.y-100)
-        text("start Fighting!", myfish.x,myfish.y-100)
-     text("click the mouse!", myfish.x,myfish.y-50)
+
+    textSize(20)
+    fill(136, 96, 255);
+      text("I'll beat you！", myfish.x,myfish.y-50)
+      textSize(30)
+    fill(255, 147, 31)
+     text("click the mouse to help the little fish!!", myfish.x-200,myfish.y-200)
     
     if(mouseIsPressed==true){
       this.fightArc+=0.01*PI
+      this.fightcolor-=this.fightcolorchange
     }
     }
     
@@ -938,20 +988,23 @@ for(let i = 0; i < confettis.length; i++){
   if(dist(myfish.x,myfish.y,this.x,this.y)<300&&myfish.x>this.x+this.w/2&&this.turnAround==false){
     this.startChasing=true
     this.speed=0
-    fill(255)
-    
+    fill(this.fightcolor)
+         noStroke()
     if(this.fightArc<2*PI){
       arc(this.x,this.y,600,600,this.fightArc,2*PI)
-    
-    textSize(30)
-    fill(0,255,255)
-    // text("start Fighting!", this.x-this.w/2,this.y-200)
-    //  text("click the mouse!", this.x-this.w/2,this.y-100)
-      text("start Fighting!", myfish.x,myfish.y-100)
-     text("click the mouse!", myfish.x,myfish.y-50)
+    fill(255,100,100)
+       textSize(20)
+     text("Let's fight.",this.x-100,this.y-this.h/2-20)
+    textSize(20)
+    fill(136, 96, 255);
+      text("I'll beat you！", myfish.x,myfish.y-50)
+      textSize(30)
+    fill(255, 147, 31)
+     text("click the mouse to help the little fish!!", myfish.x-200,myfish.y-200)
       
     if(mouseIsPressed==true){
       this.fightArc+=0.01*PI
+      this.fightcolor-=this.fightcolorchange
     }
     }
     
